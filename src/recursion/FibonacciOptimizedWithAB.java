@@ -13,7 +13,7 @@ public class FibonacciOptimizedWithAB {
             if(f[n-1] == -1)
                 f[n-1] = fibonacci(n-1);
             f[n] = f[n-2] + f[n-1];
-            return f[n-2] + f[n-1];
+            return f[n];
         }
     }
 
