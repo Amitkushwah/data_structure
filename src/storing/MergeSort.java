@@ -35,8 +35,8 @@ public class MergeSort {
             temp.add(arr[right]);
             right++;
         }
-        for(int i = 0; i <= high; i++)
-            arr[i] = temp.get(i);
+        for (int i = low; i <= high; i++)
+                arr[i] = temp.get(i - low);
     }
     static void mergeSort(int[] arr){
         divide(arr, 0, arr.length-1);
