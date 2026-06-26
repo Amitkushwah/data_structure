@@ -19,7 +19,7 @@ public class QuickSort {
             while(arr[i] <= pivot && i <= high - 1){
                 i++;
             }
-            while (arr[j] > pivot && j <= low + 1){
+            while (arr[j] > pivot && j >= low + 1){
                 j--;
             }
             if(i < j){
@@ -35,7 +35,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {2,5,3,7,4,5,1,9};
+        int[] arr = {2,8,3,7,4,5,1,9};
         quickSort(arr, 0, arr.length-1);
         Arrays.stream(arr).forEach(System.out::println);
     }
