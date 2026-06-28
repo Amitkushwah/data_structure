@@ -38,8 +38,8 @@ public class UnionOfArray {
     }
 
     public static void main(String[] args) {
-        int[] a = {2,4,5,1,6,4};
-        int[] b = {4,6,2,4,9,3};
+        int[] a = {1,2,3,4,5,6};
+        int[] b = {1,2,3,4,5,7,8};
         List<Integer> l = union(a, b);
         l.stream().forEach(System.out::println);
     }
