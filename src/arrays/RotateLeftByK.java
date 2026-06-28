@@ -24,9 +24,29 @@ public class RotateLeftByK {
         return arr;
     }
 
+    static int[] rotateByKOptimal(int[] arr, int k){
+        int n = arr.length;
+        k = k % n;
+        reverse(arr, 0, k - 1);
+        reverse(arr, k, n -1);
+        reverse(arr, 0, n -1);
+        return arr;
+    }
+
+    static void reverse(int[] arr, int start, int end){
+        while(start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
     public static void main(String[] args) {
         int[] arr = {1,4,5,3,5,6};
-        rotateByK(arr, 3);
+//        rotateByK(arr, 3);
+        rotateByKOptimal(arr, 3);
         Arrays.stream(arr).forEach(System.out::println);
     }
 }
