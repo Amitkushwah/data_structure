@@ -19,7 +19,7 @@ public class MissingNumber {
     }
 
     static int missingNoBetter(int[] arr) {
-        int n = arr.length+1;
+        int n = arr.length + 1;
         int[] freq = new int[n + 1];
 
         for (int j : arr) freq[j]++;
@@ -31,12 +31,12 @@ public class MissingNumber {
         return -1;
     }
 
-    static int missingNoOptimal(int[] arr){
-        int n = arr.length+1;
+    static int missingNoOptimal(int[] arr) {
+        int n = arr.length + 1;
         int realSum = 0;
         int expectedSum = 0;
 
-        for(int i: arr)
+        for (int i : arr)
             realSum += i;
 
         expectedSum = n * (n + 1) / 2;
