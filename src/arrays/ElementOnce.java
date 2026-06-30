@@ -33,10 +33,19 @@ public class ElementOnce {
         return -1;
     }
 
+    static int findElementAppearsOnceOptimal(int[] arr) {
+        int xor = 0;
+        for (int i : arr) {
+            xor ^= i;
+        }
+        return xor;
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 1, 2, 3, 3, 4, 4};
         System.out.println(findElementAppearsOnce(arr));
         System.out.println(findElementAppearsOnceBetter(arr));
+        System.out.println(findElementAppearsOnceOptimal(arr));
 
     }
 }
