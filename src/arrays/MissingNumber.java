@@ -31,9 +31,23 @@ public class MissingNumber {
         return -1;
     }
 
+    static int missingNoOptimal(int[] arr){
+        int n = arr.length+1;
+        int realSum = 0;
+        int expectedSum = 0;
+
+        for(int i: arr)
+            realSum += i;
+
+        expectedSum = n * (n + 1) / 2;
+
+        return expectedSum - realSum;
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 5, 6};
         System.out.println(missingNo(arr));
         System.out.println(missingNoBetter(arr));
+        System.out.println(missingNoOptimal(arr));
     }
 }
