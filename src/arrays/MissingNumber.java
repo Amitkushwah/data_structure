@@ -18,9 +18,22 @@ public class MissingNumber {
         return -1;
     }
 
+    static int missingNoBetter(int[] arr) {
+        int n = arr.length+1;
+        int[] freq = new int[n + 1];
+
+        for (int j : arr) freq[j]++;
+
+        for (int i = 1; i <= n + 1; i++)
+            if (freq[i] == 0)
+                return i;
+
+        return -1;
+    }
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 5, 6};
         System.out.println(missingNo(arr));
+        System.out.println(missingNoBetter(arr));
     }
 }
