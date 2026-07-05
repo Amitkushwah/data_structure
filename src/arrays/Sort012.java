@@ -25,11 +25,36 @@ public class Sort012 {
             arr[i] = 2;
     }
 
+    static void sort012Optimal(int[] arr) { // Dutch National Flag Algorithm
+        int n = arr.length;
+        int low = 0, mid = 0, high = n - 1;
+        while (mid <= high){
+            if(arr[mid] == 0){
+                int temp = arr[mid];
+                arr[mid] = arr[low];
+                arr[low] = temp;
+                low++;
+                mid++;
+            }
+            else if(arr[mid] == 1){
+                mid++;
+            }
+            else {
+                int temp = arr[mid];
+                arr[mid] = arr[high];
+                arr[high] = temp;
+                high--;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 0, 2, 0, 1, 0, 2, 1, 2, 1, 0};
         sort012(arr);
         Arrays.stream(arr).forEach(System.out::println);
         sort012Better(arr);
+        Arrays.stream(arr).forEach(System.out::println);
+        sort012Optimal(arr);
         Arrays.stream(arr).forEach(System.out::println);
     }
 
