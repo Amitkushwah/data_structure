@@ -48,8 +48,8 @@ public class MajorityElement {
                 count--;
         }
         int count1 = 0;
-        for (int i = 0; i < n; i++) {
-            if (arr[i] == el)
+        for (int j : arr) {
+            if (j == el)
                 count1++;
         }
         if (count1 >= n / 2)
