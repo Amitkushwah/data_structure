@@ -34,9 +34,33 @@ public class MajorityElement {
         return -1;
     }
 
+    static int majorityElementOptimal(int[] arr) {
+        int n = arr.length;
+        int el = -1;
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            if (count == 0) {
+                count++;
+                el = arr[i];
+            } else if (arr[i] == el) {
+                count++;
+            } else
+                count--;
+        }
+        int count1 = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == el)
+                count1++;
+        }
+        if (count1 >= n / 2)
+            return el;
+        return -1;
+    }
+
     public static void main(String[] args) {
         int[] arr = {7, 7, 5, 7, 5, 1, 5, 7, 5, 5, 7, 7, 5, 5, 5, 5, 5};
         System.out.println(majorityElement(arr));
         System.out.println(majorityElementBetter(arr));
+        System.out.println(majorityElementOptimal(arr));
     }
 }
