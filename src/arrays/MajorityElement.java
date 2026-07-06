@@ -1,5 +1,8 @@
 package arrays;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MajorityElement {
     static int majorityElement(int[] arr) {
         int n = arr.length;
@@ -16,8 +19,24 @@ public class MajorityElement {
         return -1;
     }
 
+    static int majorityElementBetter(int[] arr) {
+        int n = arr.length;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i : arr) {
+            map.put(i, map.getOrDefault(i, 0) + 1);
+        }
+
+        for (Map.Entry<Integer, Integer> data : map.entrySet()) {
+            if (data.getValue() >= n / 2)
+                return data.getKey();
+        }
+
+        return -1;
+    }
+
     public static void main(String[] args) {
         int[] arr = {7, 7, 5, 7, 5, 1, 5, 7, 5, 5, 7, 7, 5, 5, 5, 5, 5};
         System.out.println(majorityElement(arr));
+        System.out.println(majorityElementBetter(arr));
     }
 }
