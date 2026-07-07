@@ -3,7 +3,23 @@ package arrays;
 import java.util.Arrays;
 
 public class MaxSubarrayKadanesClass {
-    static int[] maxSubarray(int[] arr) {
+    static int maxSubarray(int[] arr) {
+        int sum = 0;
+        int max = Integer.MIN_VALUE;
+
+        for (int j : arr) {
+            sum += j;
+
+            if (sum > max)
+                max = sum;
+
+            if (sum < 0)
+                sum = 0;
+        }
+        return max;
+    }
+
+    static int[] maxSubarrayLength(int[] arr) {
         int n = arr.length;
         int ansStart = -1;
         int ansEnd = -1;
@@ -31,7 +47,8 @@ public class MaxSubarrayKadanesClass {
 
     public static void main(String[] args) {
         int[] arr = {-2, -3, 4, -1, -2, 1, 5, -3};
-        int[] ans = maxSubarray(arr);
+        int[] ans = maxSubarrayLength(arr);
         Arrays.stream(ans).forEach(System.out::println);
+        System.out.println(maxSubarray(arr));
     }
 }
