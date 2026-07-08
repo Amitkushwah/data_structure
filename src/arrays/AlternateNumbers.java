@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class AlternateNumbers {
-    static void alternateNo(int[] arr) {
+    static void alternateNo(int[] arr) { // if an array only contains same number of positive and negative elements
         List<Integer> pos = new ArrayList<>();
         List<Integer> neg = new ArrayList<>();
 
@@ -20,7 +20,7 @@ public class AlternateNumbers {
         }
     }
 
-    static int[] alternateNoBetter(int[] arr) {
+    static int[] alternateNoBetter(int[] arr) { // if an array only contains same number of positive and negative elements
         int n = arr.length;
         int posIndex = 0;
         int negIndex = 1;
@@ -37,6 +37,8 @@ public class AlternateNumbers {
         }
         return ans;
     }
+
+
 
     public static void main(String[] args) {
         int[] arr = {1, -3, 4, 5, -2, 6, -7, -4};
