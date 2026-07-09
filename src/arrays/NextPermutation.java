@@ -15,6 +15,7 @@ public class NextPermutation {
         }
         if (ind == -1) {
             reverse(arr, 0, n - 1);
+            return;
         }
         for (int i = n - 1; i > ind; i--) {
             if (arr[i] > arr[ind]) {
