@@ -8,6 +8,10 @@ import java.util.Set;
 public class LongestConsecutive {
     static int longestConsecutive(int[] arr) {
         int n = arr.length;
+
+        if(arr.length == 0)
+            return 0;
+
         int longest = 1;
 
         for (int i = 0; i < n; i++) {
@@ -31,10 +35,15 @@ public class LongestConsecutive {
 
     static int longestConsecutiveBetter(int[] arr) {
         int n = arr.length;
+
+        if(arr.length == 0)
+            return 0;
+
         int longest = 1;
         int count = 0;
         int lastSmaller = Integer.MIN_VALUE;
         Arrays.sort(arr);
+
         for (int i = 0; i < n; i++) {
             if (arr[i] - 1 == lastSmaller) {
                 count += 1;
@@ -51,6 +60,10 @@ public class LongestConsecutive {
 
     static int longestConsecutiveOptimal(int[] arr) {
         int longest = 1;
+
+        if(arr.length == 0)
+            return 0;
+
         Set<Integer> set = new HashSet<>();
 
         for (int i : arr) {
