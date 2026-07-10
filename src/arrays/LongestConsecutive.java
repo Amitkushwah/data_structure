@@ -1,5 +1,8 @@
 package arrays;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class LongestConsecutive {
     static int longestConsecutive(int[] arr) {
         int n = arr.length;
@@ -24,8 +27,30 @@ public class LongestConsecutive {
         return false;
     }
 
+    static int longestConsecutiveBetter(int[] arr) {
+        int n = arr.length;
+        int longest = 1;
+        int count = 0;
+        int lastSmaller = Integer.MIN_VALUE;
+        Arrays.sort(arr);
+        for (int i = 0; i < n; i++) {
+            if (arr[i] - 1 == lastSmaller) {
+                count += 1;
+                lastSmaller = arr[i];
+            }
+            if (arr[i] != lastSmaller) {
+                count = 1;
+                lastSmaller = arr[i];
+            }
+            longest = Math.max(longest, count);
+        }
+        return longest;
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 2, 8, 3, 7, 9, 10, 4, 11};
         System.out.println(longestConsecutive(arr));
+        System.out.println("-----------------");
+        System.out.println(longestConsecutiveBetter(arr));
     }
 }
