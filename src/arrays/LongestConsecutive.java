@@ -2,6 +2,8 @@ package arrays;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class LongestConsecutive {
     static int longestConsecutive(int[] arr) {
@@ -47,10 +49,34 @@ public class LongestConsecutive {
         return longest;
     }
 
+    static int longestConsecutiveOptimal(int[] arr) {
+        int longest = 1;
+        Set<Integer> set = new HashSet<>();
+
+        for (int i : arr) {
+            set.add(i);
+        }
+
+        for (int i : set) {
+            if (!set.contains(i - 1)) {
+                int count = 1;
+                int x = i;
+                while (set.contains(x + 1)) {
+                    count++;
+                    x++;
+                }
+                longest = Math.max(longest, count);
+            }
+        }
+        return longest;
+    }
+
     public static void main(String[] args) {
         int[] arr = {1, 2, 8, 3, 7, 9, 10, 4, 11};
         System.out.println(longestConsecutive(arr));
         System.out.println("-----------------");
         System.out.println(longestConsecutiveBetter(arr));
+        System.out.println("-----------------");
+        System.out.println(longestConsecutiveOptimal(arr));
     }
 }
