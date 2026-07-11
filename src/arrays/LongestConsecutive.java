@@ -14,9 +14,9 @@ public class LongestConsecutive {
 
         int longest = 1;
 
-        for (int i = 0; i < n; i++) {
+        for (int j : arr) {
             int count = 1;
-            int value = arr[i];
+            int value = j;
             while (linearSearch(arr, value + 1)) {
                 count++;
                 value += 1;
