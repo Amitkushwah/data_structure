@@ -42,11 +42,11 @@ public class AlternateNumbers {
         int n = arr.length;
         List<Integer> pos = new ArrayList<>(), neg = new ArrayList<>();
 
-        for (int i = 0; i < n; i++) {
-            if (arr[i] > 0)
-                pos.add(arr[i]);
+        for (int j : arr) {
+            if (j > 0)
+                pos.add(j);
             else
-                neg.add(arr[i]);
+                neg.add(j);
         }
         if (pos.size() > neg.size()) {
             for (int i = 0; i < neg.size(); i++) {
