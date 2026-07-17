@@ -13,5 +13,6 @@ public class PascalTriangleGivenRowColumnNo {
     public static void main(String[] args) {
         int r = 8, c = 3;
         System.out.println(nCR(r-1, c-1));
+        System.out.println(nCR(5-1, 3-1));
     }
 }
