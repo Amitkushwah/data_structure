@@ -13,19 +13,13 @@ public class PascalTrianglePrintRow {
         return res;
     }
 
-    static List<Long> printPascalTriangleRowOptimal(int n) {
-        List<Long> ans = new ArrayList<>();
-
-        for (int row = 1; row <= n; row++) {
-            for (int col = 1; col <= row; col++) {
-                ans.add(nCr(row - 1, col - 1));
-            }
+    static void printPascalTriangleRowBruteForce(int n) {
+        for (int c = 1; c <= n; c++) {
+            System.out.println(nCr(n - 1, c - 1));
         }
-        return ans;
     }
 
     public static void main(String[] args) {
-        List<Long> ans = printPascalTriangleRowOptimal(3);
-        ans.forEach(System.out::println);
+        printPascalTriangleRowBruteForce(4);
     }
 }
