@@ -13,7 +13,7 @@ public class PascalTrianglePrintRow {
         return res;
     }
 
-    static List<Long> printPascalTriangleRow(int n) {
+    static List<Long> printPascalTriangleRowOptimal(int n) {
         List<Long> ans = new ArrayList<>();
 
         for (int row = 1; row <= n; row++) {
@@ -25,7 +25,7 @@ public class PascalTrianglePrintRow {
     }
 
     public static void main(String[] args) {
-        List<Long> ans = printPascalTriangleRow(3);
+        List<Long> ans = printPascalTriangleRowOptimal(3);
         ans.forEach(System.out::println);
     }
 }
