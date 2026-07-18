@@ -30,8 +30,9 @@ public class PascalTrianglePrintRow {
     }
 
     public static void main(String[] args) {
-        printPascalTriangleRowBruteForce(4);
+        int row = 4;
+        printPascalTriangleRowBruteForce(row);
         System.out.println();
-        printPascalTriangleRowOptimal(4);
+        printPascalTriangleRowOptimal(row);
     }
 }
