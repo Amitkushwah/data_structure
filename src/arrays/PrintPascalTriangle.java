@@ -47,8 +47,8 @@ public class PrintPascalTriangle {
 
     public static void main(String[] args) {
         int row = 5;
-        List<List<Long>> ans = printPascalTriangleBruteForce(row);
-        ans.forEach(System.out::println);
+        List<List<Long>> ansBruteForce = printPascalTriangleBruteForce(row);
+        ansBruteForce.forEach(System.out::println);
         System.out.println("---------------");
         List<List<Long>> ansOptimal = printPascalTriangleOptimal(row);
         ansOptimal.forEach(System.out::println);
