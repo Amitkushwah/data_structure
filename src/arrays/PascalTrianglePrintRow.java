@@ -15,11 +15,23 @@ public class PascalTrianglePrintRow {
 
     static void printPascalTriangleRowBruteForce(int n) {
         for (int c = 1; c <= n; c++) {
-            System.out.println(nCr(n - 1, c - 1));
+            System.out.print(nCr(n - 1, c - 1) + " ");
+        }
+    }
+
+    static void printPascalTriangleRowOptimal(int n){
+        int res = 1;
+        System.out.print(res + " ");
+        for(int c = 1; c < n; c++){
+            res = res * (n - c);
+            res = res / c;
+            System.out.print(res + " ");
         }
     }
 
     public static void main(String[] args) {
         printPascalTriangleRowBruteForce(4);
+        System.out.println();
+        printPascalTriangleRowOptimal(4);
     }
 }
