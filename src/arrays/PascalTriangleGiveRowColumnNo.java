@@ -1,6 +1,6 @@
 package arrays;
 
-public class PascalTriangleGivenRowColumnNo {
+public class PascalTriangleGiveRowColumnNo {
     static long nCR(int n, int r) {
         long res = 1;
         for (int i = 0; i < r; i++) {
