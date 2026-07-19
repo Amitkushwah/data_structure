@@ -10,8 +10,8 @@ public class RotateLeftByK {
         k = k % n;
         List<Integer> l = new ArrayList<>();
 
-        for(int i = 0; i < n; i++){
-            l.add(arr[i]);
+        for (int j : arr) {
+            l.add(j);
         }
 
         for(int i = k; i < n; i++){
