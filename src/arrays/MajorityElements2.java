@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MajorityElements2 {
-    static List<Integer> majorityElements(int[] arr) { // methods finds the elements which are more than n/3
+public class MajorityElements2 { // class finds the elements which are more than n/3
+    static List<Integer> majorityElements(int[] arr) {
         List<Integer> ans = new ArrayList<>();
 
         for (int i = 0; i < arr.length; i++) {
