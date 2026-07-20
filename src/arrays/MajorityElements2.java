@@ -38,6 +38,8 @@ public class MajorityElements2 { // class finds the elements which are more than
             if (map.get(i) == min) {
                 ans.add(i);
             }
+            if (ans.size() == 2)
+                break;
         }
         return ans;
     }
