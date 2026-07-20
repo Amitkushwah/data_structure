@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MajorityElements2 {
-    static List<Integer> majorityElements(int[] arr) {
+    static List<Integer> majorityElements(int[] arr) { // methods finds the elements which are more than n/3
         List<Integer> ans = new ArrayList<>();
 
         for (int i = 0; i < arr.length; i++) {
