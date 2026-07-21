@@ -5,7 +5,6 @@ import java.util.*;
 public class ThreeSum {
     static List<List<Integer>> threeSum(int[] arr, int target) {
         int n = arr.length;
-        List<List<Integer>> ans = new ArrayList<>();
         Set<List<Integer>> set = new HashSet<>();
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
@@ -21,7 +20,7 @@ public class ThreeSum {
                 }
             }
         }
-        ans.addAll(set);
+        List<List<Integer>> ans = new ArrayList<>(set);
         return ans;
     }
 
