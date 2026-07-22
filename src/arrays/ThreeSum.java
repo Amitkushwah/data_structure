@@ -2,14 +2,14 @@ package arrays;
 
 import java.util.*;
 
-public class ThreeSum {
-    static List<List<Integer>> threeSum(int[] arr, int target) {
+public class ThreeSum { // Given an array of N integers, your task is to find unique triplets that add up to give a sum of zero. In short, you need to return an array of all the unique triplets [arr[a], arr[b], arr[c]] such that i!=j, j!=k, k!=i, and their sum is equal to zero.
+    static List<List<Integer>> threeSum(int[] arr) {
         int n = arr.length;
         Set<List<Integer>> set = new HashSet<>();
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 for (int k = j + 1; k < n; k++) {
-                    if (arr[i] + arr[j] + arr[k] == target) {
+                    if (arr[i] + arr[j] + arr[k] == 0) {
                         List<Integer> temp = new ArrayList<>();
                         temp.add(arr[i]);
                         temp.add(arr[j]);
@@ -24,7 +24,7 @@ public class ThreeSum {
         return ans;
     }
 
-    static List<List<Integer>> threeSumBetter(int[] arr, int target) {
+    static List<List<Integer>> threeSumBetter(int[] arr) {
         int n = arr.length;
         Set<List<Integer>> set = new HashSet<>();
 
@@ -49,10 +49,10 @@ public class ThreeSum {
 
     public static void main(String[] args) {
         int[] arr = {-1, 0, 1, 2, -1, -4};
-        List<List<Integer>> result = threeSum(arr, 0);
+        List<List<Integer>> result = threeSum(arr);
         result.forEach(System.out::println);
         System.out.println("--------------");
-        List<List<Integer>> result2 = threeSumBetter(arr, 0);
+        List<List<Integer>> result2 = threeSumBetter(arr);
         result2.forEach(System.out::println);
     }
 
