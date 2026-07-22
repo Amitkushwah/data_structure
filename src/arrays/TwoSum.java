@@ -26,7 +26,7 @@ public class TwoSum {
         return new int[]{-1, -1};
     }
 
-    static boolean twoSumOptimal(int[] arr, int target) {
+    static boolean twoSumOptimal(int[] arr, int target) { // only works for sorted array
         int n = arr.length;
         int left = 0, right = n - 1;
         while (left < right) {
