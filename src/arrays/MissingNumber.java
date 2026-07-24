@@ -50,6 +50,7 @@ public class MissingNumber {
         System.out.println(missingNo(arr));
         System.out.println("--------------");
         System.out.println(missingNoBetter(arr));
+        System.out.println("--------------");
         System.out.println(missingNoOptimal(arr));
     }
 }
