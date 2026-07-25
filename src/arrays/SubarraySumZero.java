@@ -14,10 +14,12 @@ public class SubarraySumZero {
             sum += arr[i];
             if (sum == 0)
                 maxi = i + 1;
-            if (map.containsKey(sum)) {
-                maxi = Math.max(maxi, i - map.get(sum));
-            } else {
-                map.put(sum, i);
+            else {
+                if (map.containsKey(sum)) {
+                    maxi = Math.max(maxi, i - map.get(sum));
+                } else {
+                    map.put(sum, i);
+                }
             }
         }
         return maxi;
