@@ -59,6 +59,6 @@ public class PrefixSumCount {
         System.out.println(prefixSumCountBetter(arr, k));
         System.out.println("--------------------");
         System.out.println(prefixSumCountOptimal(arr, k));
-
+        System.out.println("--------------------");
     }
 }
