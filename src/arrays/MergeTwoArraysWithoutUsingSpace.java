@@ -32,24 +32,23 @@ public class MergeTwoArraysWithoutUsingSpace {
             int left = 0;
             int right = gap;
             while (right < len) {
-                if(left < n && right >= n){
+                if (left < n && right >= n) {
                     swapIfGrater(arr1, arr2, left, right - n);
-                }
-                else if(left >= n){
+                } else if (left >= n) {
                     swapIfGrater(arr2, arr2, left - n, right - n);
-                }
-                else {
+                } else {
                     swapIfGrater(arr1, arr1, left, right);
                 }
                 left++;
                 right++;
             }
-            if(gap == 1) break;
-            gap = (gap/2) + (gap%2);
+            if (gap == 1) break;
+            gap = (gap / 2) + (gap % 2);
         }
     }
-    private static void swapIfGrater(int[] arr1, int[] arr2, int ind1, int ind2){
-        if(arr1[ind1] > arr2[ind2]){
+
+    private static void swapIfGrater(int[] arr1, int[] arr2, int ind1, int ind2) {
+        if (arr1[ind1] > arr2[ind2]) {
             int temp = arr1[ind1];
             arr1[ind1] = arr2[ind2];
             arr2[ind2] = temp;
