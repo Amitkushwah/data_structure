@@ -41,6 +41,23 @@ public class MissingAndRepeatingNo {
         return new int[]{repeating, missing};
     }
 
+    static int[] missingAndRepeatingNoOptimalMath(int[] arr, int n){
+        int sN = (n * (n + 1)) / 2;
+        int s2N = (n * (n + 1)  * (2*n + 1)) / 6;
+        int s = 0;
+        int s2 = 0;
+        for(int i = 0; i < n; i++){
+            s += arr[i];
+            s2 += arr[i] * arr[i];
+        }
+        int val1 = s - sN; // x - y
+        int val2 = s2 - s2N;
+        val2 = val2/val1; // x + y
+        int x = (val1 + val2) / 2;
+        int y = x - val1;
+        return new int[] {x, y};
+    }
+
     public static void main(String[] args) {
         int[] arr = {6, 3, 1, 4, 2, 1};
         int n = 6;
@@ -49,5 +66,8 @@ public class MissingAndRepeatingNo {
         System.out.println("---------------");
         int[] resultBetter = missingAndRepeatingNoBetter(arr, n);
         Arrays.stream(resultBetter).forEach(System.out::println);
+        System.out.println("---------------");
+        int[] resultOptimal = missingAndRepeatingNoOptimalMath(arr, n);
+        Arrays.stream(resultOptimal).forEach(System.out::println);
     }
 }
