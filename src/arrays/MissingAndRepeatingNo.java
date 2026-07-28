@@ -24,7 +24,6 @@ public class MissingAndRepeatingNo {
     }
 
     static int[] missingAndRepeatingNoBetter(int[] arr, int n) {
-        HashMap<Integer, Integer> map = new HashMap<>();
         int[] hash = new int[n + 1];
         int repeating = -1;
         int missing = -1;
