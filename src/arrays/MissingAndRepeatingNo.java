@@ -51,7 +51,7 @@ public class MissingAndRepeatingNo {
             s2 += arr[i] * arr[i];
         }
         int val1 = s - sN; // x - y
-        int val2 = s2 - s2N;
+        int val2 = s2 - s2N; // xsq - ysq = val2sq
         val2 = val2 / val1; // x + y
         int x = (val1 + val2) / 2;
         int y = x - val1;
