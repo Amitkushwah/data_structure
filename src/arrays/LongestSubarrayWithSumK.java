@@ -69,6 +69,7 @@ public class LongestSubarrayWithSumK {
         int[] arr = {1, 2, 3, 1, 1, 1, 1, 4, 2, 3};
         int target = 4;
         System.out.println(longestSubarrayBetter(arr, target));
+        System.out.println("----------------");
         System.out.println(longestSubarrayOptimal(arr, target));
 
     }
