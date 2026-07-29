@@ -17,9 +17,9 @@ public class CountInversion {
         return count;
     }
 
-    static int divide(int[] arr, int low, int high){
+    static int divide(int[] arr, int low, int high) {
         int count = 0;
-        if(low == high)
+        if (low == high)
             return count;
         int mid = (low + high) / 2;
         count += divide(arr, low, mid);
@@ -28,41 +28,40 @@ public class CountInversion {
         return count;
     }
 
-    static int merge(int[] arr, int low, int mid, int high){
+    static int merge(int[] arr, int low, int mid, int high) {
         int left = low;
         int right = mid + 1;
         List<Integer> temp = new ArrayList<>();
         int count = 0;
 
-        while(left <= mid && right <= high){
-            if(arr[left] <= arr[right]){
+        while (left <= mid && right <= high) {
+            if (arr[left] <= arr[right]) {
                 temp.add(arr[left]);
                 left++;
-            }
-            else {
+            } else {
                 temp.add(arr[right]);
                 count += (mid - left + 1);
                 right++;
             }
         }
 
-        while(left <= mid){
+        while (left <= mid) {
             temp.add(arr[left]);
             left++;
         }
-        while (right <= high){
+        while (right <= high) {
             temp.add(arr[right]);
             right++;
         }
 
-        for(int i = low; i <= high; i++){
+        for (int i = low; i <= high; i++) {
             arr[i] = temp.get(i - low);
         }
 
         return count;
     }
 
-    static int mergeSort(int[] arr){
+    static int mergeSort(int[] arr) {
         return divide(arr, 0, arr.length - 1);
     }
 
