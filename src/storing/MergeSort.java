@@ -6,9 +6,9 @@ import java.util.List;
 
 public class MergeSort {
     static void divide(int[] arr, int low, int high){
-        if(high == low)
+        if(low == high)
             return;
-        int mid = (high+low)/2;
+        int mid = (low+high)/2;
         divide(arr, low, mid);
         divide(arr, mid+1, high);
         merge(arr, low, mid, high);
