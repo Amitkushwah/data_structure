@@ -3,18 +3,18 @@ package arrays;
 import java.util.*;
 
 public class FourSum {
-    static List<List<Integer>> fourSumBetter(int[] arr, int target){
+    static List<List<Integer>> fourSumBetter(int[] arr, int target) {
         Set<List<Integer>> set = new HashSet<>();
         int n = arr.length;
 
-        for(int i = 0; i < n; i++){
-            for(int j = i + 1; j < n; j++){
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
                 Set<Integer> temp = new HashSet<>();
-                for(int k = j+1; k < n; k++){
+                for (int k = j + 1; k < n; k++) {
                     int sum = arr[i] + arr[j];
                     sum += arr[k];
                     int forth = target - sum;
-                    if(temp.contains(forth)){
+                    if (temp.contains(forth)) {
                         List<Integer> l = new ArrayList<>();
                         l.add(arr[i]);
                         l.add(arr[j]);
@@ -34,20 +34,20 @@ public class FourSum {
         Arrays.sort(nums);
         List<List<Integer>> ans = new ArrayList<>();
         int n = nums.length;
-        for(int i = 0; i < n; i++){
-            if(i > 0 && nums[i] == nums[i-1]) continue;
-            for(int j = i + 1; j < n; j++){
-                if(j != i + 1 && nums[j] == nums[j-1]) continue;
+        for (int i = 0; i < n; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+            for (int j = i + 1; j < n; j++) {
+                if (j != i + 1 && nums[j] == nums[j - 1]) continue;
                 int k = j + 1;
                 int l = n - 1;
-                while(k < l){
+                while (k < l) {
                     long sum = nums[i];
                     sum += nums[j];
                     sum += nums[k];
                     sum += nums[l];
-                    if(sum < target)
+                    if (sum < target)
                         k++;
-                    else if(sum > target)
+                    else if (sum > target)
                         l--;
                     else {
                         List<Integer> temp = new ArrayList<>();
@@ -58,8 +58,8 @@ public class FourSum {
                         ans.add(temp);
                         k++;
                         l--;
-                        while(k < l && nums[k] == nums[k-1]) k++;
-                        while(k < l && nums[l] == nums[l + 1]) l--;
+                        while (k < l && nums[k] == nums[k - 1]) k++;
+                        while (k < l && nums[l] == nums[l + 1]) l--;
                     }
                 }
             }
@@ -68,12 +68,12 @@ public class FourSum {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,2,-1,-2,2,0,-1};
+        int[] arr = {1, 2, -1, -2, 2, 0, -1};
         int target = 0;
         List<List<Integer>> result = fourSumBetter(arr, target);
         result.forEach(System.out::println);
         System.out.println("------------------");
-        List<List<Integer>> result2 = fourSumOptimal(arr,target);
+        List<List<Integer>> result2 = fourSumOptimal(arr, target);
         result2.forEach(System.out::println);
     }
 }
