@@ -37,6 +37,7 @@ public class SecondLargest {
     public static void main(String[] args) {
         int[] arr = {3, 5, 2, 8, 7, 6, 8, 4};
         System.out.println(secondLargestOptimal(arr));
+        System.out.println("-----------------------");
         System.out.println(secondLargestBetter(arr));
     }
 }
