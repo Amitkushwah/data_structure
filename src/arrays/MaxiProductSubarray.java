@@ -1,12 +1,12 @@
 package arrays;
 
 public class MaxiProductSubarray {
-    static int maxiProductSubarray(int[] arr){
+    static int maxiProductSubarray(int[] arr) {
         int n = arr.length;
         int ans = arr[0];
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             int prod = 1;
-            for(int j = i; j < n; j++){
+            for (int j = i; j < n; j++) {
                 prod *= arr[j];
                 ans = Math.max(ans, prod);
             }
