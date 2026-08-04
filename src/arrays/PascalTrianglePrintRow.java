@@ -33,6 +33,7 @@ public class PascalTrianglePrintRow {
         int row = 4;
         printPascalTriangleRowBruteForce(row);
         System.out.println();
+        System.out.println("---------------");
         printPascalTriangleRowOptimal(row);
     }
 }
