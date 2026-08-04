@@ -28,7 +28,7 @@ public class MaxiProductSubarray {
 
             pre *= arr[i];
             suf *= arr[n - i - 1];
-            
+
             ans = Math.max(ans, Math.max(pre, suf));
         }
         return ans;
