@@ -60,6 +60,7 @@ public class MajorityElement {
     public static void main(String[] args) {
         int[] arr = {7, 7, 5, 7, 5, 1, 5, 7, 5, 5, 7, 7, 5, 5, 5, 5, 5};
         System.out.println(majorityElement(arr));
+        System.out.println("------------------");
         System.out.println(majorityElementBetter(arr));
         System.out.println(majorityElementOptimal(arr));
     }
