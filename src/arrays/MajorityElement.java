@@ -62,6 +62,7 @@ public class MajorityElement {
         System.out.println(majorityElement(arr));
         System.out.println("------------------");
         System.out.println(majorityElementBetter(arr));
+        System.out.println("------------------");
         System.out.println(majorityElementOptimal(arr));
     }
 }
