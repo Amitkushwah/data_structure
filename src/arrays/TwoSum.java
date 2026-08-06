@@ -49,6 +49,7 @@ public class TwoSum {
         System.out.println("------------------");
         int[] ans2 = twoSumBetter(arr, target);
         System.out.println(ans2[0] + " " + ans2[1]);
+        System.out.println("-------------------");
         System.out.println(twoSumOptimal(arr, target));
     }
 }
