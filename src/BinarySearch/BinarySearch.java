@@ -14,18 +14,18 @@ public class BinarySearch {
         return -1;
     }
 
-    static int searchRecursive(int[] arr, int low, int high, int target){
-        if(low > high)
+    static int searchRecursive(int[] arr, int low, int high, int target) {
+        if (low > high)
             return -1;
-        int mid = low + (high - low)/2;
-        if(arr[mid] == target)
+        int mid = low + (high - low) / 2;
+        if (arr[mid] == target)
             return mid;
-        else if(target > arr[mid])
+        else if (target > arr[mid])
             return searchRecursive(arr, mid + 1, high, target);
         return searchRecursive(arr, low, mid - 1, target);
     }
 
-    static int callSearchRecursive(int[] arr, int target){
+    static int callSearchRecursive(int[] arr, int target) {
         return searchRecursive(arr, 0, arr.length - 1, target);
     }
 
