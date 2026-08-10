@@ -32,6 +32,7 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] arr = {1, 3, 5, 6, 8, 9};
         System.out.println(search(arr, 9));
+        System.out.println("------------------");
         System.out.println(callSearchRecursive(arr, 9));
     }
 }
