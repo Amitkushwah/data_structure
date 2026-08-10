@@ -20,7 +20,7 @@ public class ButterflyPattern {
             // stomach
             else {
                 if (i < 9) {
-                    for (int j = 0; j < 2; j++) { 
+                    for (int j = 0; j < 2; j++) {
                         System.out.print(" *");
                     }
                 }
