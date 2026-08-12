@@ -48,9 +48,9 @@ public class CountOccurrence {
         return new int[]{first, last};
     }
 
-    static int countOccurrence(int[] arr, int target){
+    static int countOccurrence(int[] arr, int target) {
         int[] ans = findOccWithBinarySearch(arr, target);
-        if(ans[0] == -1)
+        if (ans[0] == -1)
             return 0;
         return ans[1] - ans[0] + 1;
     }
