@@ -17,46 +17,44 @@ public class FirstNLastOcc {
         return new int[]{first, last};
     }
 
-    static int lowerBond(int[] arr, int target){
+    static int lowerBond(int[] arr, int target) {
         int n = arr.length;
         int low = 0;
         int high = n - 1;
         int ans = n;
 
-        while (low <= high){
+        while (low <= high) {
             int mid = (low + high) / 2;
-            if(arr[mid] >= target){
+            if (arr[mid] >= target) {
                 ans = mid;
                 high = mid - 1;
-            }
-            else {
+            } else {
                 low = mid + 1;
             }
         }
         return ans;
     }
 
-    static int upperBond(int[] arr, int target){
+    static int upperBond(int[] arr, int target) {
         int n = arr.length;
         int low = 0;
-        int high = n -1;
+        int high = n - 1;
         int ans = n;
-        while(low <= high){
-            int mid = (low + high)/2;
-            if(arr[mid] > target){
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (arr[mid] > target) {
                 ans = mid;
                 high = mid - 1;
-            }
-            else{
+            } else {
                 low = mid + 1;
             }
         }
         return ans;
     }
 
-    static int[] findOccOptimal(int[] arr, int target){
+    static int[] findOccOptimal(int[] arr, int target) {
         int lb = lowerBond(arr, target);
-        if(lb == arr.length || arr[lb] != target)
+        if (lb == arr.length || arr[lb] != target)
             return new int[]{-1, -1};
         int ub = upperBond(arr, target);
         return new int[]{lb, ub - 1};
