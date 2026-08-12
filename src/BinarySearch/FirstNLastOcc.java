@@ -60,49 +60,45 @@ public class FirstNLastOcc {
         return new int[]{lb, ub - 1};
     }
 
-    static int findFirst(int[] arr, int target){
+    static int findFirst(int[] arr, int target) {
         int n = arr.length;
         int low = 0;
         int high = n - 1;
         int ans = -1;
-        while(low <= high){
-            int mid = (low + high)/2;
-            if(arr[mid] == target){
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (arr[mid] == target) {
                 ans = mid;
                 high = mid - 1;
-            }
-            else if(arr[mid] < target){
+            } else if (arr[mid] < target) {
                 low = mid + 1;
-            }
-            else {
+            } else {
                 high = mid - 1;
             }
         }
         return ans;
     }
 
-    static int findLast(int[] arr, int target){
+    static int findLast(int[] arr, int target) {
         int n = arr.length;
         int low = 0;
         int high = n - 1;
         int ans = -1;
-        while(low <= high){
-            int mid = (low + high)/2;
-            if(arr[mid] == target){
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (arr[mid] == target) {
                 ans = mid;
                 low = mid + 1;
-            }
-            else if(arr[mid] < target){
+            } else if (arr[mid] < target) {
                 low = mid + 1;
-            }
-            else {
+            } else {
                 high = mid - 1;
             }
         }
         return ans;
     }
 
-    static int[] findOccWithBinarySearch(int[] arr, int target){
+    static int[] findOccWithBinarySearch(int[] arr, int target) {
         return new int[]{findFirst(arr, target), findLast(arr, target)};
     }
 
