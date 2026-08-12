@@ -100,7 +100,7 @@ public class FirstNLastOcc {
 
     static int[] findOccWithBinarySearch(int[] arr, int target) {
         int first = findFirst(arr, target);
-        if(first == -1) return new int[]{-1, -1};
+        if (first == -1) return new int[]{-1, -1};
         int last = findLast(arr, target);
         return new int[]{first, last};
     }
