@@ -112,6 +112,6 @@ public class FirstNLastOcc {
         System.out.println("----------------");
         Arrays.stream(findOccOptimal(arr, target)).forEach(System.out::println);
         System.out.println("----------------");
-        Arrays.stream(findOccWithBinarySearch(arr, 8)).forEach(System.out::println);
+        Arrays.stream(findOccWithBinarySearch(arr, target)).forEach(System.out::println);
     }
 }
