@@ -107,7 +107,8 @@ public class FirstNLastOcc {
 
     public static void main(String[] args) {
         int[] arr = {2, 4, 6, 8, 8, 8, 11, 13};
-        Arrays.stream(findOcc(arr, 8)).forEach(System.out::println);
+        int target = 8;
+        Arrays.stream(findOcc(arr, target)).forEach(System.out::println);
         System.out.println("----------------");
         Arrays.stream(findOccOptimal(arr, 8)).forEach(System.out::println);
         System.out.println("----------------");
