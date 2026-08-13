@@ -110,7 +110,7 @@ public class FirstNLastOcc {
         int target = 8;
         Arrays.stream(findOcc(arr, target)).forEach(System.out::println);
         System.out.println("----------------");
-        Arrays.stream(findOccOptimal(arr, 8)).forEach(System.out::println);
+        Arrays.stream(findOccOptimal(arr, target)).forEach(System.out::println);
         System.out.println("----------------");
         Arrays.stream(findOccWithBinarySearch(arr, 8)).forEach(System.out::println);
     }
