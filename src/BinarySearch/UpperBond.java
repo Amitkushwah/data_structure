@@ -20,6 +20,7 @@ public class UpperBond {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 3, 5, 8, 8, 10, 10, 11};
-        System.out.println(searchUpperBond(arr, 5));
+        int target = 5;
+        System.out.println(searchUpperBond(arr, target));
     }
 }
