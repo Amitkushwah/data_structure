@@ -1,28 +1,24 @@
 package BinarySearch;
 
 public class SearchInRotatedArray {
-    static int search(int[] arr, int target){
+    static int search(int[] arr, int target) {
         int n = arr.length;
         int low = 0;
         int high = n - 1;
-        while(low <= high){
-            int mid = (low + high)/2;
-            if(arr[mid] == target){
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (arr[mid] == target) {
                 return mid;
-            }
-            else if(arr[low] <= arr[mid]){
-                if(target >= arr[low] && target <= arr[mid]){
+            } else if (arr[low] <= arr[mid]) {
+                if (target >= arr[low] && target <= arr[mid]) {
                     high = mid - 1;
-                }
-                else{
+                } else {
                     low = mid + 1;
                 }
-            }
-            else {
-                if(target >= arr[mid] && target <= high){
+            } else {
+                if (target >= arr[mid] && target <= high) {
                     low = mid + 1;
-                }
-                else {
+                } else {
                     high = mid - 1;
                 }
             }
@@ -31,7 +27,7 @@ public class SearchInRotatedArray {
     }
 
     public static void main(String[] args) {
-        int[] arr = {4,5,6,7,0,1,2};
+        int[] arr = {4, 5, 6, 7, 0, 1, 2};
         int target = 2;
         System.out.println(search(arr, target));
     }
