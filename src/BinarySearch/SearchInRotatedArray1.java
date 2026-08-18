@@ -1,6 +1,6 @@
 package BinarySearch;
 
-public class SearchInRotatedArray {
+public class SearchInRotatedArray1 {
     static int search(int[] arr, int target) {
         int n = arr.length;
         int low = 0;
