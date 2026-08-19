@@ -29,16 +29,14 @@ public class SingleElementInSortedArray {
             } else if (i == n - 1) {
                 if (arr[n - 1] != arr[n - 2])
                     return arr[n - 1];
-            } else {
-                if (arr[i] != arr[i - 1] && arr[i] != arr[i + 1])
+            } else if (arr[i] != arr[i - 1] && arr[i] != arr[i + 1])
                     return arr[i];
-            }
         }
         return -1;
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 1, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7};
+        int[] arr = {1, 1, 2, 2,3, 3, 4,4, 5, 5, 6, 7, 7};
         System.out.println(findOptimal(arr));
         System.out.println("--------------");
         System.out.println(find(arr));
