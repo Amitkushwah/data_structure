@@ -3,8 +3,7 @@ package BinarySearch;
 public class SearchInRotatedArray1 {
     static int search(int[] arr, int target) {
         int n = arr.length;
-        int low = 0;
-        int high = n - 1;
+        int low = 0, high = n - 1;
         while (low <= high) {
             int mid = (low + high) / 2;
             if (arr[mid] == target) {
