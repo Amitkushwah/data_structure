@@ -20,6 +20,7 @@ public class InsertPosition {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 3, 5, 8, 8, 10, 10, 11};
-        System.out.println(insertPosition(arr, 4));
+        int target = 4;
+        System.out.println(insertPosition(arr, target));
     }
 }
