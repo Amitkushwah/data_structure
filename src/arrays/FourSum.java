@@ -72,7 +72,7 @@ public class FourSum {
         int target = 0;
         List<List<Integer>> result = fourSumBetter(arr, target);
         result.forEach(System.out::println);
-        System.out.println("------------------");
+        System.out.println("-------------------");
         List<List<Integer>> result2 = fourSumOptimal(arr, target);
         result2.forEach(System.out::println);
     }
