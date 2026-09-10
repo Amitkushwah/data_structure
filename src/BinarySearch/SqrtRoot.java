@@ -12,19 +12,18 @@ public class SqrtRoot {
         return ans;
     }
 
-    static int sqrtRootOptimal(int n){
-        if(n < 2) return n;
+    static int sqrtRootOptimal(int n) {
+        if (n < 2) return n;
 
         int ans = -1;
         int low = 1;
-        int high = n/2;
-        while(low <= high){
+        int high = n / 2;
+        while (low <= high) {
             int mid = (low + high) / 2;
-            if(mid * mid <= n){
+            if (mid * mid <= n) {
                 low = mid + 1;
                 ans = mid;
-            }
-            else{
+            } else {
                 high = mid - 1;
             }
         }
