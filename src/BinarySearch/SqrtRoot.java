@@ -1,10 +1,10 @@
 package BinarySearch;
 
 public class SqrtRoot {
-    static int sqrtRoot(int n){
+    static int sqrtRoot(int n) {
         int ans = -1;
-        for(int i = 1; i <= n; i++){
-            if(i * i <= n )
+        for (int i = 1; i <= n; i++) {
+            if (i * i <= n)
                 ans = i;
             else
                 break;
