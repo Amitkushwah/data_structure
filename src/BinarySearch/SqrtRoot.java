@@ -14,7 +14,6 @@ public class SqrtRoot {
 
     static int sqrtRootOptimal(int n) {
         if (n < 2) return n;
-
         int ans = -1;
         int low = 1;
         int high = n / 2;
