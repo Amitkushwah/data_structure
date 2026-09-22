@@ -32,7 +32,7 @@ public class SqrtRoot {
     public static void main(String[] args) {
         int n = 50;
         System.out.println(sqrtRoot(n));
-        System.out.println("-----------------");
+        System.out.println("----------------");
         System.out.println(sqrtRootOptimal(n));
     }
 }
